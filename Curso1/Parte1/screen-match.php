@@ -1,13 +1,50 @@
 <?php
 
-echo "Bem Vindo(a) ao Anime Match!
-";
+echo "Bem Vindo(a) ao Anime Match!\n";
 
+
+$nomeAnime = "RE:ZERO";
+$nomeAnime = "Sou Sou No Frieren";
 $nomeAnime = "SoloLeveling";
-$anoLancamento = $argv[1] ?? 2024;
-$somaDeNotas = (5+3+2+5+4);
-$notaAnime = $somaDeNotas / 5;
-$incluidoNoPlano = true;
 
+$anoLancamento = 2024;
+$somaDeNotas = 0;
+
+for() {
+    $somaDeNotas += $argv[$contador];
+    $contador++;
+}
+
+$numeroDeNotas = $argc - 1;
+$notaAnime = $somaDeNotas / $numeroDeNotas;
+
+
+
+
+
+$planoprime = true;
+$incluidoNoPlano = $planoprime || $anoLancamento < 2020;
 
 echo "NomeDoFilme: $nomeAnime \nNotaDoFilme: $notaAnime\nAnoDeLançamento: $anoLancamento";
+
+if ($anoLancamento >= 2024) {
+    echo "\nEste anime é um lançamento";
+} else if ($anoLancamento >= 2020) {
+    echo "\nEste anime é Novo";
+} else if ($anoLancamento >= 2010) {
+    echo "\nEste anime não é tão recente assim";
+} else {
+    echo "\nEste anime é antigo";
+}
+
+
+$genero = match ($nomeAnime) {
+     "SoloLeveling" => "Ação",
+     "Sou Sou No Frieren" => "Fantasia",
+     "RE:ZERO" => "Isekai",
+     default => "Desconhecido"
+}; 
+
+echo "\nO genero é $genero";
+
+echo $argc;
