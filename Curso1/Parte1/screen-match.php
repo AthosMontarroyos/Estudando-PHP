@@ -10,9 +10,9 @@ $nomeAnime = "SoloLeveling";
 $anoLancamento = 2024;
 $somaDeNotas = 0;
 
-for() {
+for ($contador = 1; $contador < $argc; $contador++ ) {
     $somaDeNotas += $argv[$contador];
-    $contador++;
+    
 }
 
 $numeroDeNotas = $argc - 1;
@@ -25,7 +25,7 @@ $notaAnime = $somaDeNotas / $numeroDeNotas;
 $planoprime = true;
 $incluidoNoPlano = $planoprime || $anoLancamento < 2020;
 
-echo "NomeDoFilme: $nomeAnime \nNotaDoFilme: $notaAnime\nAnoDeLançamento: $anoLancamento";
+echo "NomeDoAnime: $nomeAnime \nNotaDoAnime: $notaAnime\nAnoDeLançamento: $anoLancamento";
 
 if ($anoLancamento >= 2024) {
     echo "\nEste anime é um lançamento";
@@ -47,4 +47,4 @@ $genero = match ($nomeAnime) {
 
 echo "\nO genero é $genero";
 
-echo $argc;
+echo "\n$argc";
