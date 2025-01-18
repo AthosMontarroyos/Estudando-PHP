@@ -8,19 +8,26 @@ $nomeAnime = "Sou Sou No Frieren";
 $nomeAnime = "SoloLeveling";
 
 $anoLancamento = 2024;
-$somaDeNotas = 0;
 
-for ($contador = 1; $contador < $argc; $contador++ ) {
-    $somaDeNotas += $argv[$contador];
-    
+$quantidadeDeNotas = $argc - 1;
+$notas =[];
+
+foreach ($no
+    # code...
+} {
+   $notas[] = (float) $argv[$contador];    
+}
+$somaDeNotas = 0;
+for ($i = 0; $i < count($notas); $i++) {
+    $somaDeNotas += $notas[$i];
 }
 
-$numeroDeNotas = $argc - 1;
-if ($numeroDeNotas == 0) {
-    echo "[ERROR] Numero De Notas Não Poder Valer 0";
- } else {
-$notaAnime = $somaDeNotas / $numeroDeNotas;
- }
+var_dump($notas);
+
+$notaAnime = $somaDeNotas / $quantidadeDeNotas;
+
+echo "\n$quantidadeDeNotas";
+echo "\n$somaDeNotas\n";
 
 $planoprime = true;
 $incluidoNoPlano = $planoprime || $anoLancamento < 2020;
@@ -49,13 +56,15 @@ echo "\nO genero é $genero";
 
 echo "\n$argc\n";
 
-$NotasRecebidas = [4.5, 5, 2.8, 2.7, 3.5, 4.7];
+/*$NotasRecebidas = [4.5, 5, 2.8, 2.7, 3.5, 4.7];
 
-var_dump($NotasRecebidas);
+var_dump($NotasRecebidas);*/
 
 $AnimeShingeki = [
     "nome" => "Shingeki No Kyojin",
     "Lançamento" => 2009,
-
-
+    "Categoria" => "Suspence",
+    "Nota" => 4.7,
 ];
+
+echo $AnimeShingeki['nome'];
