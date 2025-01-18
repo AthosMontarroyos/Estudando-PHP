@@ -16,11 +16,11 @@ for ($contador = 1; $contador < $argc; $contador++ ) {
 }
 
 $numeroDeNotas = $argc - 1;
+if ($numeroDeNotas == 0) {
+    echo "[ERROR] Numero De Notas Não Poder Valer 0";
+ } else {
 $notaAnime = $somaDeNotas / $numeroDeNotas;
-
-
-
-
+ }
 
 $planoprime = true;
 $incluidoNoPlano = $planoprime || $anoLancamento < 2020;
@@ -47,4 +47,15 @@ $genero = match ($nomeAnime) {
 
 echo "\nO genero é $genero";
 
-echo "\n$argc";
+echo "\n$argc\n";
+
+$NotasRecebidas = [4.5, 5, 2.8, 2.7, 3.5, 4.7];
+
+var_dump($NotasRecebidas);
+
+$AnimeShingeki = [
+    "nome" => "Shingeki No Kyojin",
+    "Lançamento" => 2009,
+
+
+];
