@@ -12,22 +12,12 @@ $anoLancamento = 2024;
 $quantidadeDeNotas = $argc - 1;
 $notas =[];
 
-foreach ($no
-    # code...
-} {
+for ($contador = 0; $contador < $argc; $contador++) {
    $notas[] = (float) $argv[$contador];    
 }
-$somaDeNotas = 0;
-for ($i = 0; $i < count($notas); $i++) {
-    $somaDeNotas += $notas[$i];
-}
-
 var_dump($notas);
 
-$notaAnime = $somaDeNotas / $quantidadeDeNotas;
-
-echo "\n$quantidadeDeNotas";
-echo "\n$somaDeNotas\n";
+$notaAnime = array_sum($notas) / $quantidadeDeNotas;
 
 $planoprime = true;
 $incluidoNoPlano = $planoprime || $anoLancamento < 2020;
